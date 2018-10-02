@@ -1,7 +1,9 @@
 # Dinner Bell
 
- Pat Lehmann & Matt Roig & Matty Timko
+ Pat Lehmann, Matt Roig & Matty Timko
+ 
  Project 3
+ 
  University of Richmond Coding Boot Camp | Spring 2018 Cohort
 
 
