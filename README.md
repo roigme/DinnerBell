@@ -1,6 +1,9 @@
-# Create React Express App
+# Dinncer Bell
 
-## About This Boilerplate
+## Pat Lehmann & Matt Roig & Matty Timko
+## Project 3
+## University of Richmond Coding Boot Camp | Spring 2018 Cohort
+
 
 This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
 
