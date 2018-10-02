@@ -6,28 +6,17 @@
  
  University of Richmond Coding Boot Camp | Spring 2018 Cohort
 
-## About
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+## Concept
+Connecting diners who want to share a home cooked meal. Dinner bell is a community focused social media web application. Users will be able to be both a host and a diner. Our applications main goal is to bring people together through food.
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## User Stories
 
-## Starting the app locally
+### As the Diner
+[] I want to share a meal with locals in my community.
+[] I want to able to search for meals based on what i am in the mood for.
+[] I want to be able to open a secure line of communication between potential hosts.
+[]I want to be able to create a profile page to present potential hosts for myself/mygroup
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
-
-```
-yarn install
-```
-
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-yarn start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
 ## Deployment (Heroku)
 
