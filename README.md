@@ -12,10 +12,10 @@ Connecting diners who want to share a home cooked meal. Dinner bell is a communi
 ## User Stories
 
 ### As the Diner
-[] I want to share a meal with locals in my community.
-[] I want to able to search for meals based on what i am in the mood for.
-[] I want to be able to open a secure line of communication between potential hosts.
-[]I want to be able to create a profile page to present potential hosts for myself/mygroup
+-[] I want to share a meal with locals in my community.
+-[] I want to able to search for meals based on what i am in the mood for.
+-[] I want to be able to open a secure line of communication between potential hosts.
+-[]I want to be able to create a profile page to present potential hosts for myself/mygroup
 
 
 ## Deployment (Heroku)
