@@ -1,4 +1,4 @@
-# Dinncer Bell
+# Dinner Bell
 
 ## Pat Lehmann & Matt Roig & Matty Timko
 ## Project 3
