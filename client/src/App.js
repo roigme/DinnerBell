@@ -3,6 +3,7 @@ import "./App.css";
 import LandingPage from './components/LandingPage';
 import ButtonAppBar from './components/ButtonAppBar';
 import AboutPage from './components/AboutPage';
+import TestPage from './components/TestPage';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
       </div>
       </div>
       <AboutPage />
+      <TestPage />
       </div>
     );
   }
