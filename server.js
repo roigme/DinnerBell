@@ -3,9 +3,9 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const apiRoutes = require("./routes/apiRoutes");
 
 const mongoose = require("mongoose");
-const User = require("./models/UserModel.js");
 mongoose.connect("mongodb://localhost/dinnerbell_data", { useNewUrlParser: true });
 
 // Define middleware here
@@ -16,28 +16,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Define API routes here
-app.get("/api/users", function(req, res) {
-  User.find({}, function(error, found) {
-    if (error) {
-      console.log(error);
-    }
-    else {
-      res.json(found);
-    }
-  });
-});
-
-app.post("/api/submit", function(req, res) {
-  // Create a new user using req.body
-  User.create(req.body)
-    .then(function() {
-      res.json();
-    })
-    .catch(function(err) {
-      res.json(err);
-    });
-});
+app.use("/api", apiRoutes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
