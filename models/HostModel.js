@@ -1,14 +1,14 @@
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var HostSchema = new Schema({
+const HostSchema = new Schema({
         maxGroup: Number,
         foodType: String,
         About: String,
         Photos: [String]
 });
 
-var Host = mongoose.model("Host", HostSchema);
+const Host = mongoose.model("Host", HostSchema);
 
 module.exports = Host;
