@@ -46,6 +46,18 @@ router.get('/users', function(req, res) {
     });
   })
 
+  router.get('/search/foodtype=:foodtype/maxgroup=:maxgroup', function (req, res){
+    Host.find({ 
+      maxGroup:{ $lte: req.params.maxgroup },
+      foodType:{ $regex: new RegExp("^" + req.params.foodtype.toLowerCase(), "i" ) }}, function(error, found) {
+      if (error) {
+        return error;
+      }
+      else {
+        res.json(found);
+      }
+    });
+  })
   
   router.post('/newuser', function(req, res) {
     // Create a new user using req.body
@@ -58,7 +70,7 @@ router.get('/users', function(req, res) {
       });
   });
 
-  router.post('/newHost', function(req, res) {
+  router.post('/newhost', function(req, res) {
     // Create a new host using req.body
     Host.create(req.body)
       .then(function() {
