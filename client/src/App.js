@@ -6,6 +6,7 @@ import ButtonAppBar from './components/ButtonAppBar';
 import AboutPage from './components/AboutPage';
 import LogInPage from './components/LogInPage';
 import SignUpPage from './components/SignUpPage';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -24,6 +25,9 @@ class App extends Component {
       </div>
       </div>
       <AboutPage />
+      <div>
+      <Footer />
+      </div>
       </div>
     );
   }
