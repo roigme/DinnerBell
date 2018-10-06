@@ -3,14 +3,14 @@ import './AboutPage.css';
 
 const AboutPage = () => {
     return (
-        <div className="aboutme-wrapper container-fluid">
+        <div className="aboutme-wrapper container-fluid" id="aboutpage-top">
             <div className="row">
                 <span className="aboutme-header text-center"> How It Works </span>
             </div>
             <div className="row">
                 <div className="card about-me-box col-xs-5 col-lg-3">
                     <div className="card-img-wrapper">
-                        <span className="card-header-text"><i class="fas fa-search-location"></i> Search</span>
+                        <span className="card-header-text"><i className="fas fa-search-location"></i> Search</span>
                     </div>
                     <hr />
                     <div className="card-body">
@@ -28,7 +28,7 @@ const AboutPage = () => {
                 </div>
                 <div className="card about-me-box col-xs-5 col-lg-3">
                     <div className="card-img-wrapper">
-                        <span className="card-header-text"><i class="fas fa-utensils"></i> Eat</span>
+                        <span className="card-header-text"><i className="fas fa-utensils"></i> Eat</span>
                     </div>
                     <hr />
                     <div className="card-body">
