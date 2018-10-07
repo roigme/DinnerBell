@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import LandingPage from './components/LandingPage';
-import ButtonAppBar from './components/ButtonAppBar';
-import AboutPage from './components/AboutPage';
-import LogInPage from './components/LogInPage';
-import SignUpPage from './components/SignUpPage';
+import LandingPage from './components/LandingPage/LandingPage.js';
+import ButtonAppBar from './components/ButtonAppBar/ButtonAppBar.js';
+import AboutPage from './components/AboutPage/AboutPage.js';
+import LogInPage from './components/LogInPage/LoginPage.js';
+import SignUpPage from './components/SignUpPage/SignUpPage.js';
 
 class App extends Component {
   render() {
