@@ -4,7 +4,7 @@ import './ButtonAppBar.css'
 
 function ButtonAppBar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-white main-nav">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark text-white main-nav">
       <div className="icon-brand-wrapper">
         <img src={require('./images/iconfinder-256.png')} alt="dinner plate" className='plate-icon' />
       </div>

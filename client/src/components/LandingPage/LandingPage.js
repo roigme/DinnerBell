@@ -18,7 +18,7 @@ class LandingPage extends Component {
             <i class="fas fa-utensils" /> Eat
           </span>
         </div>
-        <div class="home-search">
+        <div className="home-search">
           <select className="custom-select custom-select-lg mb-3">
           <i className="fas fa-users"></i>
 
