@@ -22,7 +22,7 @@ class Footer extends Component {
             </p>
           </div>
         </footer>
-      </div>
+      </div> 
     );
   }
 }
