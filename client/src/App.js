@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-
 import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
 import LandingPage from './components/LandingPage/LandingPage.js';
 import ButtonAppBar from './components/ButtonAppBar/ButtonAppBar.js';
 import AboutPage from './components/AboutPage/AboutPage.js';
 import Login from './components/auth/Login.js';
 import SignUpPage from './components/SignUpPage/SignUpPage.js';
+import Footer from './components/Footer';
 function onAuthRequired({history}){
   history.push('/login')
 }
@@ -35,6 +35,8 @@ class App extends Component {
           </div>
         </div>
         <AboutPage />
+          <div>
+      <Footer />
       </div>
     );
   }
