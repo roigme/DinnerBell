@@ -10,6 +10,9 @@ import SideNav, {
 // Be sure to include styles at some point, probably during your bootstraping
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import UserProfile from "../UserProfile";
+
+
 
 class UserDashNav extends Component {
   render() {
@@ -66,11 +69,11 @@ class UserDashNav extends Component {
                   </NavItem>
                 </SideNav.Nav>
               </SideNav>
-              {/* <main>
-                <Route path="/" exact component={props => <RootComponent />} />
-                <Route path="/home" component={props => <Home />} />
-                <Route path="/devices" component={props => <Devices />} />
-              </main> */}
+              <main>
+                
+                <Route path="/profile" component={props => <UserProfile />} />
+               
+              </main>
             </React.Fragment>
           )}
         />
