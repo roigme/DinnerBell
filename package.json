@@ -19,6 +19,7 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "@trendmicro/react-sidenav": "^0.4.5",
     "body-parser": "^1.18.2",
     "express": "^4.15.4",
     "if-env": "^1.0.4",
