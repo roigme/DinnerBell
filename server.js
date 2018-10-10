@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require('./routes');
-const apiRoutes = require("./routes/apiRoutes");
 
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost/dinnerbell_data", { useNewUrlParser: true });

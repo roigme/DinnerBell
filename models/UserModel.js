@@ -20,7 +20,7 @@ var UserSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    hostProfiles: [{ type: Schema.Types.ObjectId, ref: 'Host' }],
+    hostProfiles: { type: Schema.Types.ObjectId, ref: 'Host' },
     dinerProfile: {
         groupSize: Number,
         About: String,
