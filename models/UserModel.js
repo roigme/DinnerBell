@@ -3,24 +3,17 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-    userName: {
+    _id: {
         type: String,
-        unique: true,
-        trim: true,
-        required: "Username is Required"
     },
-    email: {
-        type: String,
-        unique: true,
-        trim: true,
-        required: "Email is Required",
-        match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    displayName: {
+        type: String
     },
     userCreated: {
         type: Date,
         default: Date.now
     },
-    hostProfiles: [{ type: Schema.Types.ObjectId, ref: 'Host' }],
+    hostProfiles: { type: Schema.Types.ObjectId, ref: 'Host' },
     dinerProfile: {
         groupSize: Number,
         About: String,
