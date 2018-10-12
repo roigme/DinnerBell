@@ -9,17 +9,40 @@ var UserSchema = new Schema({
     email: {
         type: String,
         unique: true,
+        required: true
+    },
+    firstName: {
+        type: String,
+        default: "Not"
+    },
+    lastName: {
+        type: String,
+        default: "Available"
+    },
+    city: {
+        type: String,
+        default: "Richmond"
+    },
+    state: {
+        type: String,
+        default: "Virginia"
+    },
+    favoriteFoods: {
+        type: [String]
     },
     userCreated: {
         type: Date,
         default: Date.now
     },
-    hostProfile: { 
-        type: Schema.Types.ObjectId, 
+    hostProfile: {
+        type: Schema.Types.ObjectId,
         ref: 'Host'
     },
     dinerProfile: {
-        groupSize: Number,
+        groupSize: {
+            type: "Number",
+            default: 1
+        },
         about: String,
         photos: [String]
     }
