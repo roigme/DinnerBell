@@ -3,21 +3,25 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-    _id: {
-        type: String,
-    },
     displayName: {
         type: String
+    },
+    email: {
+        type: String,
+        unique: true,
     },
     userCreated: {
         type: Date,
         default: Date.now
     },
-    hostProfiles: { type: Schema.Types.ObjectId, ref: 'Host' },
+    hostProfile: { 
+        type: Schema.Types.ObjectId, 
+        ref: 'Host'
+    },
     dinerProfile: {
         groupSize: Number,
-        About: String,
-        Photos: [String]
+        about: String,
+        photos: [String]
     }
 });
 

@@ -5,8 +5,8 @@ const Schema = mongoose.Schema;
 const HostSchema = new Schema({
         maxGroup: Number,
         foodType: String,
-        About: String,
-        Photos: [String]
+        about: String,
+        photos: [String]
 });
 
 const Host = mongoose.model("Host", HostSchema);
