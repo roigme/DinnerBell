@@ -3,12 +3,12 @@ const hostController = require("../../controllers/hostController");
 
 // Matches with "/api/host"
 router.route("/")
-    .get(hostController.findAll)
-    .post(hostController.create);
+    .get(hostController.findAll);
 
 // Matches with "/api/host/:id"
 router
     .route("/:id")
+    .post(hostController.create)
     .put(hostController.update)
     .delete(hostController.remove);
 

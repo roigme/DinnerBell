@@ -30,7 +30,7 @@ export default {
     return axios.delete("/api/host/" + id);
   },
   // Saves a host to the database
-  saveHost: function(hostData) {
-    return axios.post("/api/host", hostData);
+  saveHost: function(id) {
+    return axios.post("/api/host" + id);
   }
 };

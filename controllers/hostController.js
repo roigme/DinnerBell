@@ -30,10 +30,21 @@ module.exports = {
           .catch(err => res.status(422).json(err));
       },
     create: function (req, res) {
-        db.Host
-            .create(req.body)
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
+        db.Host.create(req.body)
+        .then(function(dbHost) {
+          // If a Note was created successfully, find one User (there's only one) and push the new Note's _id to the User's `notes` array
+          // { new: true } tells the query that we want it to return the updated User -- it returns the original by default
+          // Since our mongoose query returns a promise, we can chain another `.then` which receives the result of the query
+          return db.User.findOneAndUpdate({ _id: req.params.id }, { hostProfile: dbHost._id } , { new: true });
+        })
+        .then(function(dbUser) {
+          // If the User was updated successfully, send it back to the client
+          res.json(dbUser);
+        })
+        .catch(function(err) {
+          // If an error occurs, send it back to the client
+          res.json(err);
+        });
     },
     update: function (req, res) {
         db.Host
