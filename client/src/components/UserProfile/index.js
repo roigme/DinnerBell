@@ -7,8 +7,36 @@ import SideNav, {
   NavText
 } from "@trendmicro/react-sidenav";
 import "./UserProfile.css";
+import API from '../../utils/API'
 
 class UserProfile extends Component {
+
+  state = {
+    // IMPORTANT: This userID property is what the app hinges on when showing the profile to the user based on who is logged in...
+    userID: '5bc101d35b968f445872fd2a',
+    displayName: '',
+    email: '',
+    profile: [],
+    favoriteFood: [],
+    dinerProfile: [],
+    hostProfile: []
+  }
+
+  componentDidMount() {
+    this.loadUser();
+  };
+
+  loadUser = () => {
+    API.getUserByID(this.state.userID)
+      .then(res => this.setState({
+        profile: res.data,
+        hostProfile: res.data.hostProfile,
+        dinerProfile: res.data.dinerProfile,
+        favoriteFood: res.data.favoriteFoods
+      }))
+      .catch(err => console.log(err));
+  };
+
   render() {
     return (
       <div className="container emp-profile">
@@ -28,11 +56,8 @@ class UserProfile extends Component {
             </div>
             <div className="col-md-6">
               <div className="profile-head">
-                <h5>Kshiti Ghelani</h5>
+                <h5>{this.state.profile.displayName}</h5>
                 <h6>Dinner Bell Member</h6>
-                <p className="proile-rating">
-                  RANKINGS : <span>8/10</span>
-                </p>
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                   <li className="nav-item">
                     <a
@@ -77,10 +102,9 @@ class UserProfile extends Component {
               <div className="profile-work">
                 <ul>
                   <h3>Favorite Foods</h3>
-                  <li>French Fries</li>
-                  <li>Pizza</li>
-                  <li>Burritos</li>
-                  <li>Tacos</li>
+                  {this.state.favoriteFood.map(food => {
+                   return <li key={Math.floor(Math.random() * 10000) + 1}>{food}</li>
+                  })}
                 </ul>
               </div>
             </div>
@@ -97,7 +121,7 @@ class UserProfile extends Component {
                       <label>Username</label>
                     </div>
                     <div className="col-md-6">
-                      <p>Kshiti123</p>
+                      <p>{this.state.profile.displayName ? this.state.profile.displayName : "N/A" }</p>
                     </div>
                   </div>
                   <div className="row">
@@ -105,7 +129,9 @@ class UserProfile extends Component {
                       <label>Name</label>
                     </div>
                     <div className="col-md-6">
-                      <p>Kshiti Ghelani</p>
+                      {this.state.profile.firstName ? (
+                        <p>{this.state.profile.firstName}  {this.state.profile.lastName}</p>)
+                        : <p>N/A</p>}
                     </div>
                   </div>
                   <div className="row">
@@ -113,7 +139,9 @@ class UserProfile extends Component {
                       <label>Location</label>
                     </div>
                     <div className="col-md-6">
-                      <p>Richmond, Virginia</p>
+                    {this.state.profile.city ? (
+                        <p>{this.state.profile.city}, {this.state.profile.state}</p>)
+                        : <p>N/A</p>}
                     </div>
                   </div>
                   <div className="row">
@@ -121,14 +149,18 @@ class UserProfile extends Component {
                       <label>Party Size (Including You!)</label>
                     </div>
                     <div className="col-md-6">
-                      <p>5</p>
+                    {this.state.dinerProfile.groupSize ? (
+                        <p>{this.state.dinerProfile.groupSize}</p>)
+                        : <p>N/A</p>}
                     </div>
                   </div>
                   <div className="row">
                     <div className="col-md-12">
-                      <label>Bio</label>
+                      <label>About You and Your Party</label>
                       <br />
-                      <p>Tell us about yourself!</p>
+                      {this.state.dinerProfile.about ? (
+                        <p>{this.state.dinerProfile.about}</p>)
+                        : <p>N/A</p>}
                     </div>
                   </div>
                 </div>
@@ -143,7 +175,9 @@ class UserProfile extends Component {
                       <label>Currently Hosting?</label>
                     </div>
                     <div className="col-md-6">
-                      <p>Yes</p>
+                      {!this.state.hostProfile ? <p>N/A</p> : (
+                        <p>{this.state.hostProfile.isHosting ? "Yes" : "No"}</p>
+                      )}
                     </div>
                   </div>
                   <div className="row">
@@ -151,15 +185,9 @@ class UserProfile extends Component {
                       <label>Max Party Size</label>
                     </div>
                     <div className="col-md-6">
-                      <p>10</p>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label>Days Available</label>
-                    </div>
-                    <div className="col-md-6">
-                      <p>Fri-Sun</p>
+                      {!this.state.hostProfile ? <p>N/A</p> : (
+                        <p>{this.state.hostProfile.maxGroup}</p>
+                      )}
                     </div>
                   </div>
                   <div className="row">
@@ -167,14 +195,18 @@ class UserProfile extends Component {
                       <label>Location</label>
                     </div>
                     <div className="col-md-6">
-                      <p>Richmond, VA</p>
+                      {!this.state.hostProfile ? <p>N/A</p> : (
+                        <p>{this.state.hostProfile.city}, {this.state.hostProfile.state}</p>
+                      )}
                     </div>
                   </div>
                   <div className="row">
                     <div className="col-md-12">
-                      <label>Menu</label>
+                      <label>Food Type</label>
                       <br />
-                      <p>What do you like to cook?</p>
+                      {!this.state.hostProfile ? <p>N/A</p> : (
+                        <p>{this.state.hostProfile.foodType}</p>
+                      )}
                     </div>
                   </div>
                 </div>
