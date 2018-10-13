@@ -47,15 +47,9 @@ class LandingPage extends Component {
             <i class="fas fa-utensils" /> Eat
           </span>
         </div>   
-        <div className="input-group">
-          <input name="maxGroup" value={this.state.maxGroup} type="number" className="form-control mb-3" placeholder="Number of Guests" />
-        </div>
-        <div className="input-group">
-          <input name="foodType" value={this.state.foodType} type="text" className="form-control mb-3" placeholder="Food Type" />
-        </div>
-        <button type="button" class="btn btn-primary btn-lg btn-block home-search-btn">
-         Search
-        </button>
+        <LPSearch
+          maxGroup={this.state.maxGroup}
+          foodType={this.state.foodType} />
         <AboutPage />
         <Footer />
       </div>
