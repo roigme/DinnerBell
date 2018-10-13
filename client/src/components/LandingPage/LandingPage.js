@@ -16,14 +16,12 @@ class LandingPage extends Component {
   }
 
   handleFormSubmit = () => {
-    API.getHostbyFoodAndGroup(this.state.maxGroup, this.state.foodType)      
-    .then(res => this.setState({
-      searchResults: res.data,
-    }))
+    API.getHostByFoodAndGroup(this.state.foodType, this.state.maxGroup)      
+    .then(res => console.log(res.data))
     .catch(err => console.log(err));
   }
 
-  handleInputchange = event => {
+  handleInputChange = event => {
     const { name , value } = event.target;
     this.setState({
       [name]: value
@@ -49,7 +47,9 @@ class LandingPage extends Component {
         </div>   
         <LPSearch
           maxGroup={this.state.maxGroup}
-          foodType={this.state.foodType} />
+          foodType={this.state.foodType}
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit} />
         <AboutPage />
         <Footer />
       </div>
