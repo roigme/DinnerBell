@@ -21,6 +21,9 @@ export default {
   getHostByID: function(id) {
     return axios.get("/api/host/" + id);
   },
+  getHostByFoodAndGroup: function(foodType, maxGroup) {
+    return axios.get('/api/host/' + foodType + '/' + maxGroup);
+  },
   // Saves a host to the database
   saveHost: function(id) {
     return axios.post("/api/host" + id);

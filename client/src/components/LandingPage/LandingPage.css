@@ -1,24 +1,13 @@
 
 
-.lp-wrapper {
-    padding: 30px;
-    text-align: center;
-    color: white;
-    margin-top:50px;
-}
-
 .lp {
     font-size: 58px;
 }
 
 .lp-text {
     /* position: absolute; */
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     width: 100%;
+    color: white;
     /* height: 100px; */
 }
 
@@ -74,8 +63,7 @@ a {
 }
 
 
-.home-search {
-    margin-top: 70px;
+.input-group {
     width: 60%;
     margin-right :auto;
     margin-left :auto;

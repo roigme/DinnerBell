@@ -2,20 +2,20 @@ import React, { Component } from "react";
 import "./UserProfile.css";
 import API from '../../utils/API';
 import UserProfileTabs from './UserProfileTabs';
+import UserDashNav from "../UserDashNav/UserDashNav";
 
 
 class UserProfile extends Component {
 
   state = {
     // IMPORTANT: This userID property is what the app hinges on when showing the profile to the user based on who is logged in...
-    userID: '5bc101d35b968f445872fd2a',
+    userID: '5bc20b1d6df3e713e064c969',
     displayName: '',
     email: '',
     profile: [],
     favoriteFood: [],
     dinerProfile: [],
     hostProfile: [],
-    selectedFile: null
   }
 
   componentDidMount() {
@@ -33,19 +33,10 @@ class UserProfile extends Component {
       .catch(err => console.log(err));
   };
 
-  // fileSelectedHandler = event => {
-  //   this.setState = {
-  //     selectedFile: event.target.files[0];
-  //   }
-  // }
-
-  // fileUploadHandler = () => {
-
-  // }
-
   render() {
     return (
       <div className="container emp-profile">
+      <UserDashNav />
         <form method="post">
           <div className="row">
             <div className="col-md-4">
@@ -124,6 +115,7 @@ class UserProfile extends Component {
         </form>
       </div>
     );
-  }
-}
+  };
+};
+
 export default UserProfile;

@@ -1,11 +1,40 @@
 import React, { Component } from "react";
 import "./LandingPage.css";
+import LPSearch from '../LPSearch';
+import API from '../../utils/API';
+import AboutPage from '../AboutPage/AboutPage.js';
+import Footer from '../Footer';
+import ButtonAppBar from "../ButtonAppBar/ButtonAppBar.js";
 
 class LandingPage extends Component {
+
+  state = {
+    searchResults: [],
+    maxGroup: '',
+    foodType: ''
+
+  }
+
+  handleFormSubmit = () => {
+    API.getHostbyFoodAndGroup(this.state.maxGroup, this.state.foodType)      
+    .then(res => this.setState({
+      searchResults: res.data,
+    }))
+    .catch(err => console.log(err));
+  }
+
+  handleInputchange = event => {
+    const { name , value } = event.target;
+    this.setState({
+      [name]: value
+    })
+  }
+
   render() {
     return (
       <div className="lp-wrapper">
-        <div className="lp-text">
+      <ButtonAppBar />
+        <div className="lp-text text-center">
           <span className="lp">
             <i class="fas fa-search-location" /> Search
           </span>
@@ -17,36 +46,18 @@ class LandingPage extends Component {
           <span className="lp">
             <i class="fas fa-utensils" /> Eat
           </span>
+        </div>   
+        <div className="input-group">
+          <input name="maxGroup" value={this.state.maxGroup} type="number" className="form-control mb-3" placeholder="Number of Guests" />
         </div>
-        <div className="home-search">
-          <select className="custom-select custom-select-lg mb-3">
-          <i className="fas fa-users"></i>
-
-            <option selected>Party Size?</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="3">4</option>
-            <option value="3">5</option>
-            <option value="3">6</option>
-            <option value="3">7</option>
-            <option value="3">8</option>
-            <option value="3">9</option>
-            <option value="3">10</option>
-            <option value="3">11</option>
-            <option value="3">12</option>
-          </select>
-
-          <select className="custom-select custom-select-lg mb-3">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+        <div className="input-group">
+          <input name="foodType" value={this.state.foodType} type="text" className="form-control mb-3" placeholder="Food Type" />
         </div>
         <button type="button" class="btn btn-primary btn-lg btn-block home-search-btn">
          Search
         </button>
+        <AboutPage />
+        <Footer />
       </div>
     );
   }
