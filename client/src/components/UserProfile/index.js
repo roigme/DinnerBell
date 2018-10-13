@@ -14,7 +14,8 @@ class UserProfile extends Component {
     profile: [],
     favoriteFood: [],
     dinerProfile: [],
-    hostProfile: []
+    hostProfile: [],
+    selectedFile: null
   }
 
   componentDidMount() {
@@ -32,6 +33,16 @@ class UserProfile extends Component {
       .catch(err => console.log(err));
   };
 
+  // fileSelectedHandler = event => {
+  //   this.setState = {
+  //     selectedFile: event.target.files[0];
+  //   }
+  // }
+
+  // fileUploadHandler = () => {
+
+  // }
+
   render() {
     return (
       <div className="container emp-profile">
@@ -43,10 +54,11 @@ class UserProfile extends Component {
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
                   alt=""
                 />
-                <div className="file btn btn-lg btn-primary">
-                  Change Photo
-                  <input type="file" name="file" />
+                <div className="file text-white m-auto">
+                  Click here to change photo
+                  <input type="file" onChange={this.fileSelectedHandler} name="file" />
                 </div>
+                <button className="btn btn-primary">Upload</button>
               </div>
             </div>
             <div className="col-md-6">
