@@ -1,13 +1,8 @@
 import React, { Component } from "react";
-import SideNav, {
-  Toggle,
-  Nav,
-  NavItem,
-  NavIcon,
-  NavText
-} from "@trendmicro/react-sidenav";
 import "./UserProfile.css";
-import API from '../../utils/API'
+import API from '../../utils/API';
+import UserProfileTabs from './UserProfileTabs';
+
 
 class UserProfile extends Component {
 
@@ -108,110 +103,11 @@ class UserProfile extends Component {
                 </ul>
               </div>
             </div>
-            <div className="col-md-">
-              <div className="tab-content profile-tab" id="myTabContent">
-                <div
-                  className="tab-pane fade show active"
-                  id="home"
-                  role="tabpanel"
-                  aria-labelledby="home-tab"
-                >
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label>Username</label>
-                    </div>
-                    <div className="col-md-6">
-                      <p>{this.state.profile.displayName ? this.state.profile.displayName : "N/A" }</p>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label>Name</label>
-                    </div>
-                    <div className="col-md-6">
-                      {this.state.profile.firstName ? (
-                        <p>{this.state.profile.firstName}  {this.state.profile.lastName}</p>)
-                        : <p>N/A</p>}
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label>Location</label>
-                    </div>
-                    <div className="col-md-6">
-                    {this.state.profile.city ? (
-                        <p>{this.state.profile.city}, {this.state.profile.state}</p>)
-                        : <p>N/A</p>}
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label>Party Size (Including You!)</label>
-                    </div>
-                    <div className="col-md-6">
-                    {this.state.dinerProfile.groupSize ? (
-                        <p>{this.state.dinerProfile.groupSize}</p>)
-                        : <p>N/A</p>}
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-12">
-                      <label>About You and Your Party</label>
-                      <br />
-                      {this.state.dinerProfile.about ? (
-                        <p>{this.state.dinerProfile.about}</p>)
-                        : <p>N/A</p>}
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="tab-pane fade"
-                  id="profile"
-                  role="tabpanel"
-                  aria-labelledby="profile-tab"
-                >
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label>Currently Hosting?</label>
-                    </div>
-                    <div className="col-md-6">
-                      {!this.state.hostProfile ? <p>N/A</p> : (
-                        <p>{this.state.hostProfile.isHosting ? "Yes" : "No"}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label>Max Party Size</label>
-                    </div>
-                    <div className="col-md-6">
-                      {!this.state.hostProfile ? <p>N/A</p> : (
-                        <p>{this.state.hostProfile.maxGroup}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label>Location</label>
-                    </div>
-                    <div className="col-md-6">
-                      {!this.state.hostProfile ? <p>N/A</p> : (
-                        <p>{this.state.hostProfile.city}, {this.state.hostProfile.state}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-12">
-                      <label>Food Type</label>
-                      <br />
-                      {!this.state.hostProfile ? <p>N/A</p> : (
-                        <p>{this.state.hostProfile.foodType}</p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <UserProfileTabs
+                profile={this.state.profile}
+                dinerProfile={this.state.dinerProfile}
+                hostProfile={this.state.hostProfile}
+                />
           </div>
         </form>
       </div>

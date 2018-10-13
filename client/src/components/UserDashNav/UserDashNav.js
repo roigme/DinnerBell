@@ -14,9 +14,7 @@ import UserProfile from "../UserProfile";
 
 
 
-class UserDashNav extends Component {
-
-  render() {
+const UserDashNav = () => {
     return (
       <Router>
         <Route
@@ -80,7 +78,6 @@ class UserDashNav extends Component {
         />
       </Router>
     );
-  }
-}
+  };
 
 export default UserDashNav;
