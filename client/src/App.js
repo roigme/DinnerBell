@@ -8,6 +8,7 @@ import AboutPage from "./components/AboutPage/AboutPage.js";
 import Login from "./components/auth/Login.js";
 import SignUpPage from "./components/SignUpPage/SignUpPage.js";
 import Footer from "./components/Footer";
+import UserProfile from './components/UserProfile';
 import UserDashNav from "./components/UserDashNav/UserDashNav";
 
 function onAuthRequired({ history }) {
@@ -29,6 +30,7 @@ class App extends Component {
                 <div>
                   <ButtonAppBar />
                   <Route exact path="/" component={LandingPage} />
+                  <Route exact path="/profile" component={UserProfile} />
                   <Route
                     path="/login"
                     render={() => (
@@ -48,7 +50,6 @@ class App extends Component {
         <AboutPage />
         <div>
           <Footer />
-          <UserDashNav />
         </div>
       </div>
     );
