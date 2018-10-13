@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./UserProfile.css";
 import API from '../../utils/API';
 import UserProfileTabs from './UserProfileTabs';
+import UserDashNav from "../UserDashNav/UserDashNav";
 
 
 class UserProfile extends Component {
@@ -35,6 +36,7 @@ class UserProfile extends Component {
   render() {
     return (
       <div className="container emp-profile">
+      <UserDashNav />
         <form method="post">
           <div className="row">
             <div className="col-md-4">

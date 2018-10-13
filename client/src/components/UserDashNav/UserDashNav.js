@@ -70,7 +70,7 @@ const UserDashNav = () => {
               </SideNav>
               <main>
                 
-                <Route path="/profile" component={props => <UserProfile />} />
+                {/* <Route path="/profile" component={props => <UserProfile />} /> */}
                
               </main>
             </React.Fragment>

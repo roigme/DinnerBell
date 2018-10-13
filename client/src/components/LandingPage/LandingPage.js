@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./LandingPage.css";
 import LPSearch from '../LPSearch';
 import API from '../../utils/API';
+import AboutPage from '../AboutPage/AboutPage.js';
+import Footer from '../Footer';
+import ButtonAppBar from "../ButtonAppBar/ButtonAppBar.js";
 
 class LandingPage extends Component {
 
@@ -30,7 +33,8 @@ class LandingPage extends Component {
   render() {
     return (
       <div className="lp-wrapper">
-        <div className="lp-text">
+      <ButtonAppBar />
+        <div className="lp-text text-center">
           <span className="lp">
             <i class="fas fa-search-location" /> Search
           </span>
@@ -52,6 +56,8 @@ class LandingPage extends Component {
         <button type="button" class="btn btn-primary btn-lg btn-block home-search-btn">
          Search
         </button>
+        <AboutPage />
+        <Footer />
       </div>
     );
   }
