@@ -4,7 +4,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="copyrights">
-      <footer className="container-fluid text-center foot">
+      <footer className="row text-center foot">
         <div className="col-sm-12 col-lg-12">
           <img
             src={require("./images/iconfinder-256.png")}

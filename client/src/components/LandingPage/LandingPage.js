@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./LandingPage.css";
-import LPSearch from '../LPSearch';
+import LPSearch from './LPSearch';
 import API from '../../utils/API';
-import AboutPage from '../AboutPage/AboutPage.js';
 import Footer from '../Footer';
 import ButtonAppBar from "../ButtonAppBar/ButtonAppBar.js";
+import AboutPage from '../AboutPage/AboutPage';
 
 class LandingPage extends Component {
 
@@ -16,13 +16,16 @@ class LandingPage extends Component {
   }
 
   handleFormSubmit = () => {
-    API.getHostByFoodAndGroup(this.state.foodType, this.state.maxGroup)      
-    .then(res => console.log(res.data))
-    .catch(err => console.log(err));
+    API.getHostByFoodAndGroup(this.state.foodType, this.state.maxGroup)
+      .then(res =>
+        this.setState({
+          searchResults: res.data
+        }))
+      .catch(err => console.log(err));
   }
 
   handleInputChange = event => {
-    const { name , value } = event.target;
+    const { name, value } = event.target;
     this.setState({
       [name]: value
     })
@@ -31,27 +34,20 @@ class LandingPage extends Component {
   render() {
     return (
       <div className="lp-wrapper">
-      <ButtonAppBar />
-        <div className="lp-text text-center">
-          <span className="lp">
-            <i class="fas fa-search-location" /> Search
-          </span>
-          <br />
-          <span className="lp">
-            <i className="far fa-comments" /> Connect
-          </span>
-          <br />
-          <span className="lp">
-            <i class="fas fa-utensils" /> Eat
-          </span>
-        </div>   
-        <LPSearch
-          maxGroup={this.state.maxGroup}
-          foodType={this.state.foodType}
-          handleInputChange={this.handleInputChange}
-          handleFormSubmit={this.handleFormSubmit} />
+        <div className="lp-search-bg">
+          <div className="overlay">
+            <ButtonAppBar />
+            <div className="container">
+              <LPSearch
+                maxGroup={this.state.maxGroup}
+                foodType={this.state.foodType}
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+                searchResults={this.state.searchResults} />
+            </div>
+          </div>
+        </div>
         <AboutPage />
-        <Footer />
       </div>
     );
   }

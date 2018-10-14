@@ -9,7 +9,7 @@ class UserProfile extends Component {
 
   state = {
     // IMPORTANT: This userID property is what the app hinges on when showing the profile to the user based on who is logged in...
-    userID: '5bc20b1d6df3e713e064c969',
+    userID: '5bc20b1d6df3e713e064c96c',
     displayName: '',
     email: '',
     profile: [],
@@ -47,7 +47,7 @@ class UserProfile extends Component {
                 />
                 <div className="file text-white m-auto">
                   Click here to change photo
-                  <input type="file" onChange={this.fileSelectedHandler} name="file" />
+                  <input type="file" name="file" />
                 </div>
                 <button className="btn btn-primary">Upload</button>
               </div>
