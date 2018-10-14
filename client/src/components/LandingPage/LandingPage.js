@@ -48,7 +48,9 @@ class LandingPage extends Component {
           </div>
         </div>
         <AboutPage />
+        <Footer />
       </div>
+      
     );
   }
 }

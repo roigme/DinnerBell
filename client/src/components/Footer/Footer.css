@@ -3,6 +3,22 @@ footer {
     box-shadow: 0 50vh 0 50vh #000;
     color: #707070;
     font-size: small;
+    position: fixed;
+    bottom: 0;
+    padding: 10px 0;
+    height: 110px;
+    width: 100%;
+
+
     
+
 }
     
+
+footer {
+    padding: inherit;
+}
+
+.white-txt {
+line-height: 12px;
+}
