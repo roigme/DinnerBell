@@ -27,7 +27,7 @@ const LPSearch = props => {
       <div className="col-lg-6 col-sm-12 bg-white search-results">
         <LPSearchResults
           searchResults={props.searchResults} />
-          please log in to connect with these hosts
+          Please <a href="/login"> log in </a> to connect with these hosts
       </div>
     </div>
   )

@@ -3,45 +3,36 @@ import React from 'react';
 
 const UserProfileTabs = props => {
     return (
-    <div className="col-md-7">
-    <div className="tab-content profile-tab" id="myTabContent">
+    <div className="row">
+    <div className="tab-content profile-tab row" id="myTabContent">
       <div
         className="tab-pane fade show active"
         id="home"
         role="tabpanel"
         aria-labelledby="home-tab"
       >
-        <div className="row">
-          <div className="col-md-6 col-sm-12">
+          <div className="col-lg-12 col-sm-12">
             <label>Username</label>
-          </div> 
-          <div className="col-md-6 col-sm-12">
             <p>{props.profile.displayName ? props.profile.displayName : "N/A" }</p>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6 col-sm-12">
-            <label>Name</label>
+          <div className="col-md-12 col-sm-12">
+          <label>Name</label>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 col-sm-12">
             {props.profile.firstName ? (
               <p>{props.profile.firstName}  {props.profile.lastName}</p>)
               : <p>N/A</p>}
           </div>
-        </div>
         <div className="row">
           <div className="col-md-6 col-sm-12">
-          </div>
-          <div className="col-md-6 col-sm-12">
+          <label>Location</label>
           {props.profile.city ? (
               <p>{props.profile.city}, {props.profile.state}</p>)
               : <p>N/A</p>}
           </div>
         </div>
         <div className="row">
-          <div className="col-md-6 col-sm-12">
             <label>Party Size (Including You!)</label>
-          </div>
           <div className="col-md-6 col-sm-12">
           {props.dinerProfile.groupSize ? (
               <p>{props.dinerProfile.groupSize}</p>)
@@ -100,6 +91,15 @@ const UserProfileTabs = props => {
             <br />
             {!props.hostProfile ? <p>N/A</p> : (
               <p>{props.hostProfile.foodType}</p>
+            )}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-6 col-sm-12">
+            <label>About</label>
+            <br />
+            {!props.hostProfile ? <p>N/A</p> : (
+              <p>{props.hostProfile.about}</p>
             )}
           </div>
         </div>
