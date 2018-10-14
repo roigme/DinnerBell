@@ -1,0 +1,365 @@
+{
+    "extension": "linecount",
+    "version": "0.1.7",
+    "workspace": "c:\\u_of_r_code\\DinnerBell",
+    "linecount": [
+        {
+            "version": "0.1.7",
+            "counttime": "2018-10-14 13:49:04",
+            "filesum": 57,
+            "codesum": 12206,
+            "commentsum": 230,
+            "blanksum": 2080,
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": ".firebaserc"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 0,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "client\\package.json"
+                },
+                {
+                    "filename": "client\\public\\dinner3.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client\\public\\favicon.ico",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 1,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "client\\public\\index.html"
+                },
+                {
+                    "filename": "client\\public\\logo.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "client\\public\\manifest.json"
+                },
+                {
+                    "blank": 337,
+                    "code": 771,
+                    "comment": 118,
+                    "filename": "client\\README.md"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 18,
+                    "filename": "client\\src\\App.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 44,
+                    "comment": 0,
+                    "filename": "client\\src\\App.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "client\\src\\App.test.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 35,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\AboutPage\\AboutPage.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 46,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\AboutPage\\AboutPage.js"
+                },
+                {
+                    "filename": "client\\src\\components\\AboutPage\\images\\new-york-city-streets.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 1,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\auth\\Login.css"
+                },
+                {
+                    "blank": 7,
+                    "code": 49,
+                    "comment": 3,
+                    "filename": "client\\src\\components\\auth\\Login.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 27,
+                    "comment": 7,
+                    "filename": "client\\src\\components\\auth\\SignInWidget.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 13,
+                    "comment": 6,
+                    "filename": "client\\src\\components\\ButtonAppBar\\ButtonAppBar.css"
+                },
+                {
+                    "blank": 12,
+                    "code": 88,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\ButtonAppBar\\ButtonAppBar.js"
+                },
+                {
+                    "filename": "client\\src\\components\\ButtonAppBar\\images\\iconfinder-256.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 2,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\Footer\\Footer.css"
+                },
+                {
+                    "filename": "client\\src\\components\\Footer\\images\\iconfinder-256.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 1,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\Footer\\index.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\LandingPage\\LandingPage.css"
+                },
+                {
+                    "blank": 7,
+                    "code": 49,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\LandingPage\\LandingPage.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\LandingPage\\LPSearch\\index.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\LandingPage\\LPSearch\\LPSearch.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\LandingPage\\LPSearchResults\\index.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\LandingPage\\LPSearchResults\\LPSearchResults.css"
+                },
+                {
+                    "blank": 7,
+                    "code": 75,
+                    "comment": 1,
+                    "filename": "client\\src\\components\\UserDashNav\\UserDashNav.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 111,
+                    "comment": 1,
+                    "filename": "client\\src\\components\\UserProfile\\index.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 93,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\UserProfile\\UserProfile.css"
+                },
+                {
+                    "blank": 3,
+                    "code": 109,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\UserProfile\\UserProfileTabs.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "client\\src\\firebase.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "client\\src\\index.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "client\\src\\index.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "client\\src\\logo.svg"
+                },
+                {
+                    "blank": 10,
+                    "code": 72,
+                    "comment": 26,
+                    "filename": "client\\src\\registerServiceWorker.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 24,
+                    "comment": 6,
+                    "filename": "client\\src\\utils\\API.js"
+                },
+                {
+                    "blank": 1158,
+                    "code": 7514,
+                    "comment": 16,
+                    "filename": "client\\yarn.lock"
+                },
+                {
+                    "blank": 1,
+                    "code": 56,
+                    "comment": 5,
+                    "filename": "controllers\\hostController.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 37,
+                    "comment": 0,
+                    "filename": "controllers\\userController.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "firebase.json"
+                },
+                {
+                    "blank": 4,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "models\\HostModel.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "models\\index.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 49,
+                    "comment": 0,
+                    "filename": "models\\UserModel.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 30,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 3,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "README.md"
+                },
+                {
+                    "blank": 7,
+                    "code": 19,
+                    "comment": 5,
+                    "filename": "routes\\api\\host.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 6,
+                    "comment": 1,
+                    "filename": "routes\\api\\index.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 11,
+                    "comment": 2,
+                    "filename": "routes\\api\\user.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 8,
+                    "comment": 2,
+                    "filename": "routes\\index.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 88,
+                    "comment": 1,
+                    "filename": "scripts\\seedDB.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 4,
+                    "filename": "server.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "storage.rules"
+                },
+                {
+                    "blank": 442,
+                    "code": 2496,
+                    "comment": 8,
+                    "filename": "yarn.lock"
+                }
+            ]
+        }
+    ]
+}

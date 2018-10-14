@@ -3,12 +3,13 @@
     color: darkslateblue;
     font-family: 'Bai Jamjuree', sans-serif;
     margin: auto;
+    margin-top: 20px;
     font-size: 30px;
 }
 
 .aboutme-wrapper {
-    display: inline-block;
     height: 100vh;
+    margin-top: 20px;
 }
 
 .card-img-wrapper  {
@@ -21,8 +22,10 @@
 }
 
 .about-me-box {
+    margin-top: 20px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    height: 70vh;
 }
 
 .about-me-box:hover {
