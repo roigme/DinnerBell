@@ -92,3 +92,18 @@
     font-weight: 600;
     color: #0062cc;
 }
+
+@media only screen and (max-width: 685px) {
+    .emp-profile{
+        padding: 3%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        border-radius: 0.5rem;
+        background: #fff;
+        margin-left: 68px;
+        text-align: center;
+        width: auto;
+        font-size: 12px;
+    }
+
+}
