@@ -1,0 +1,18 @@
+.auth-wrapper {
+    background-image: url('/dinner3.jpg');
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .75);  
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: auto !important;
+} 

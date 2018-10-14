@@ -1,91 +1,9 @@
-
-
-.lp {
-    font-size: 58px;
-}
-
-.lp-text {
-    /* position: absolute; */
-    width: 100%;
-    color: white;
-    /* height: 100px; */
-}
-
-a {
-  text-decoration: none;
-}
-
-.header-links {
-    padding: 50px;
-    font-size: 20px;
-    float: right;
-    font-family: 'Bai Jamjuree', sans-serif;
-}
-
-.icon-section {
-    
-    float: left;
-    color: white;
-}
-
-.plate-icon {
-    float: left;
-    color: white;
-    height: 100px;
-    margin: 20px;
-    padding-left: 25px;
-}
-
-.project-name {
-    float: right;
-    padding-top: 30px;
-    font-size: 20px;
-}
-
-.about-link {
-    color: white;
-    padding-right: 30px;
-}
-
-.header-main-text {
-    color: white;
-    font-family: 'Bai Jamjuree', sans-serif;
-}
-
-.login-link {
-    color: white;
-    padding-right: 30px;
-}
-
-.contact-link {
-    color: white;
-    padding-right: 20px;
-}
-
-
-.input-group {
-    width: 60%;
-    margin-right :auto;
-    margin-left :auto;
-
-   
-}
-
-.btn {
-    width: 60%;
-    margin-right :auto;
-    margin-left :auto;
-
-}
-
-@media only screen and (max-width: 360px) {
-    .lp { 
-        font-size: 50px !important;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .lp { 
-        font-size: 30px !important;
-    }
+.lp-search-bg {
+    background-image: url('/dinner3.jpg');
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: auto;
 }

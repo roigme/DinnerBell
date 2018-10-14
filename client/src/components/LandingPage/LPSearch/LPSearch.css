@@ -1,0 +1,20 @@
+.lp-search { 
+    margin: auto; 
+    max-width: 800px;
+}
+
+.lp-headline {
+    font-size: 45px;
+    margin-top: 40px;
+}
+
+.search-results {
+    color: darkslategray;
+    padding-top: 50px !important;
+    margin-top: 5vh;
+    overflow-y: scroll;
+}
+
+.lp-search-row {
+    height: 75vh;
+}

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import SignInWidget from './SignInWidget.js';
+import ButtonAppBar from '../ButtonAppBar/ButtonAppBar';
 import { withAuth } from '@okta/okta-react';
+import './Login.css';
 
 export default withAuth(class Login extends Component {
   constructor(props) {
@@ -29,10 +31,10 @@ export default withAuth(class Login extends Component {
       return this.props.auth.redirect({
         sessionToken: res.session.token
       });
-   } else {
-    // The user can be in another authentication state that requires further action.
-    // For more information about these states, see:
-    //   https://github.com/okta/okta-signin-widget#rendereloptions-success-error
+    } else {
+      // The user can be in another authentication state that requires further action.
+      // For more information about these states, see:
+      //   https://github.com/okta/okta-signin-widget#rendereloptions-success-error
     }
   }
 
@@ -43,10 +45,15 @@ export default withAuth(class Login extends Component {
   render() {
     if (this.state.authenticated === null) return null;
     return this.state.authenticated ?
-      <Redirect to={{ pathname: '/' }}/> :
-      <SignInWidget
-        baseUrl={this.props.baseUrl}
-        onSuccess={this.onSuccess}
-        onError={this.onError}/>;
+      <Redirect to={{ pathname: '/profile' }} /> :
+      <div className="auth-wrapper">
+      <div className="overlay">
+        <ButtonAppBar />
+          <SignInWidget
+            baseUrl={this.props.baseUrl}
+            onSuccess={this.onSuccess}
+            onError={this.onError} />
+        </div>
+      </div>
   }
 });

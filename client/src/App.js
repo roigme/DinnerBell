@@ -4,7 +4,6 @@ import "./App.css";
 import { Security, SecureRoute, ImplicitCallback } from "@okta/okta-react";
 import LandingPage from "./components/LandingPage/LandingPage.js";
 import Login from "./components/auth/Login.js";
-import SignUpPage from "./components/SignUpPage/SignUpPage.js";
 import Footer from "./components/Footer";
 import UserProfile from './components/UserProfile';
 import UserDashNav from "./components/UserDashNav/UserDashNav";
@@ -16,38 +15,30 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <div className="main-element">
-          <div className="overlay">
-            <Router>
-              <Security
-                issuer="https://dev-771854.oktapreview.com/oauth2/default"
-                client_id="0oagjm1yslOY5M4S50h7"
-                redirect_uri={window.location.origin + "/implicit/callback"}
-                onAuthRequired={onAuthRequired}
-              >
-                <div>
-                  <Route exact path="/" component={LandingPage} />
-                  <Route exact path="/profile" component={UserProfile} />
-                  <Route
-                    path="/login"
-                    render={() => (
-                      <Login baseUrl="https://dev-771854.oktapreview.com" />
-                    )}
-                  />
-                  <Route
-                    path="/implicit/callback"
-                    component={ImplicitCallback}
-                  />
-                  <Route path="/signup" component={SignUpPage} />
-                </div>
-              </Security>
-            </Router>
-          </div>
-        </div>
-        <div>
-          <Footer />
-        </div>
-      </div>
+        <Router>
+          <Security
+            issuer="https://dev-771854.oktapreview.com/oauth2/default"
+            client_id="0oagjm1yslOY5M4S50h7"
+            redirect_uri={window.location.origin + "/implicit/callback"}
+            onAuthRequired={onAuthRequired}
+          >
+            <div>
+              <Route exact path="/" component={LandingPage} />
+              <Route exact path="/profile" component={UserProfile} />
+              <Route
+                path="/login"
+                render={() => (
+                  <Login baseUrl="https://dev-771854.oktapreview.com" />
+                )}
+              />
+              <Route
+                path="/implicit/callback"
+                component={ImplicitCallback}
+              />
+            </div>
+          </Security>
+        </Router>
+      </div >
     );
   }
 }
