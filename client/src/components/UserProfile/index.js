@@ -35,14 +35,15 @@ class UserProfile extends Component {
 
   render() {
     return (
+      <div className="lp-search-bg">
+      <div className="overlay">   
       <div className="container emp-profile">
       <UserDashNav />
-        <form method="post">
           <div className="row">
             <div className="col-md-4">
               <div className="profile-img">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
+                  src="https://via.placeholder.com/350x250"
                   alt=""
                 />
                 <div className="file text-white m-auto">
@@ -51,8 +52,16 @@ class UserProfile extends Component {
                 </div>
                 <button className="btn btn-primary">Upload</button>
               </div>
+              <div className="profile-work">
+                <ul>
+                  <h3>Favorite Foods</h3>
+                  {this.state.favoriteFood.map(food => {
+                   return <li key={Math.floor(Math.random() * 10000) + 1}>{food}</li>
+                  })}
+                </ul>
+              </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 col-sm-12">
               <div className="profile-head">
                 <h5>{this.state.profile.displayName}</h5>
                 <h6>Dinner Bell Member</h6>
@@ -84,6 +93,11 @@ class UserProfile extends Component {
                     </a>
                   </li>
                 </ul>
+                <UserProfileTabs
+                profile={this.state.profile}
+                dinerProfile={this.state.dinerProfile}
+                hostProfile={this.state.hostProfile}
+                />
               </div>
             </div>
             <div className="col-md-2">
@@ -95,24 +109,8 @@ class UserProfile extends Component {
               />
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-4">
-              <div className="profile-work">
-                <ul>
-                  <h3>Favorite Foods</h3>
-                  {this.state.favoriteFood.map(food => {
-                   return <li key={Math.floor(Math.random() * 10000) + 1}>{food}</li>
-                  })}
-                </ul>
-              </div>
-            </div>
-                <UserProfileTabs
-                profile={this.state.profile}
-                dinerProfile={this.state.dinerProfile}
-                hostProfile={this.state.hostProfile}
-                />
-          </div>
-        </form>
+      </div>
+      </div>
       </div>
     );
   };
