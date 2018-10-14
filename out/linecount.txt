@@ -1,0 +1,69 @@
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-10-14 13:49:04
+count workspace : c:\u_of_r_code\DinnerBell
+total files : 57
+total code lines : 12206
+total comment lines : 230
+total blank lines : 2080
+
+.firebaserc, code is 5, comment is 0, blank is 0.
+.gitignore, code is 2, comment is 0, blank is 0.
+client\package.json, code is 23, comment is 0, blank is 0.
+client\public\dinner3.jpg, it is a binary file.
+client\public\favicon.ico, it is a binary file.
+client\public\index.html, code is 23, comment is 0, blank is 1.
+client\public\logo.png, it is a binary file.
+client\public\manifest.json, code is 15, comment is 0, blank is 0.
+client\README.md, code is 771, comment is 118, blank is 337.
+client\src\App.css, code is 0, comment is 18, blank is 0.
+client\src\App.js, code is 44, comment is 0, blank is 2.
+client\src\App.test.js, code is 7, comment is 0, blank is 1.
+client\src\components\AboutPage\AboutPage.css, code is 35, comment is 0, blank is 8.
+client\src\components\AboutPage\AboutPage.js, code is 46, comment is 0, blank is 2.
+client\src\components\AboutPage\images\new-york-city-streets.jpg, it is a binary file.
+client\src\components\auth\Login.css, code is 17, comment is 0, blank is 1.
+client\src\components\auth\Login.js, code is 49, comment is 3, blank is 7.
+client\src\components\auth\SignInWidget.js, code is 27, comment is 7, blank is 8.
+client\src\components\ButtonAppBar\ButtonAppBar.css, code is 13, comment is 6, blank is 3.
+client\src\components\ButtonAppBar\ButtonAppBar.js, code is 88, comment is 0, blank is 12.
+client\src\components\ButtonAppBar\images\iconfinder-256.png, it is a binary file.
+client\src\components\Footer\Footer.css, code is 6, comment is 0, blank is 2.
+client\src\components\Footer\images\iconfinder-256.png, it is a binary file.
+client\src\components\Footer\index.js, code is 26, comment is 0, blank is 1.
+client\src\components\LandingPage\LandingPage.css, code is 9, comment is 0, blank is 0.
+client\src\components\LandingPage\LandingPage.js, code is 49, comment is 0, blank is 7.
+client\src\components\LandingPage\LPSearch\index.js, code is 33, comment is 0, blank is 3.
+client\src\components\LandingPage\LPSearch\LPSearch.css, code is 17, comment is 0, blank is 3.
+client\src\components\LandingPage\LPSearchResults\index.js, code is 27, comment is 0, blank is 2.
+client\src\components\LandingPage\LPSearchResults\LPSearchResults.css, code is 0, comment is 0, blank is 0.
+client\src\components\UserDashNav\UserDashNav.js, code is 75, comment is 1, blank is 7.
+client\src\components\UserProfile\index.js, code is 111, comment is 1, blank is 7.
+client\src\components\UserProfile\UserProfile.css, code is 93, comment is 0, blank is 1.
+client\src\components\UserProfile\UserProfileTabs.js, code is 109, comment is 0, blank is 3.
+client\src\firebase.js, code is 11, comment is 0, blank is 2.
+client\src\index.css, code is 0, comment is 0, blank is 0.
+client\src\index.js, code is 7, comment is 0, blank is 1.
+client\src\logo.svg, code is 1, comment is 0, blank is 0.
+client\src\registerServiceWorker.js, code is 72, comment is 26, blank is 10.
+client\src\utils\API.js, code is 24, comment is 6, blank is 1.
+client\yarn.lock, code is 7514, comment is 16, blank is 1158.
+controllers\hostController.js, code is 56, comment is 5, blank is 1.
+controllers\userController.js, code is 37, comment is 0, blank is 1.
+firebase.json, code is 9, comment is 0, blank is 1.
+models\HostModel.js, code is 13, comment is 0, blank is 4.
+models\index.js, code is 4, comment is 0, blank is 0.
+models\UserModel.js, code is 49, comment is 0, blank is 4.
+package.json, code is 30, comment is 0, blank is 0.
+README.md, code is 4, comment is 0, blank is 3.
+routes\api\host.js, code is 19, comment is 5, blank is 7.
+routes\api\index.js, code is 6, comment is 1, blank is 3.
+routes\api\user.js, code is 11, comment is 2, blank is 3.
+routes\index.js, code is 8, comment is 2, blank is 3.
+scripts\seedDB.js, code is 88, comment is 1, blank is 13.
+server.js, code is 20, comment is 4, blank is 5.
+storage.rules, code is 7, comment is 0, blank is 0.
+yarn.lock, code is 2496, comment is 8, blank is 442.
+===============================================================================

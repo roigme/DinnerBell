@@ -4,7 +4,7 @@ import './AboutPage.css';
 const AboutPage = () => {
     return (
         <div className="aboutme-wrapper container-fluid" id="aboutpage-top">
-            <div className="text-center col-lg-12 col-sm-12">
+            <div className="text-center col-lg-12 col-sm-12 about-header-div">
                 <span className="aboutme-header text-center"> How It Works </span>
             </div>
             <div className="row about-cards">
@@ -36,7 +36,7 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="about-me-box row text-center about-me-summary">
+            <div className="row text-center about-me-summary">
                 <div className="about-me-summary-text col-sm-12 col-lg-12">
                     Some text that ties it all together and talks about how awesome we are.
                 </div>
