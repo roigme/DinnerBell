@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="col-sm-12 col-lg-12">
           <img
             src={require("./images/iconfinder-256.png")}
-            width="60"
-            height="65"
+            width="50"
+            height="50"
           />
           <p className="white-txt">
             Dinner Bell © 2018 Patrick Lehmann, Matt Roig &amp; Matthew Timko.

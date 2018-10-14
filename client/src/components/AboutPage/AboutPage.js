@@ -14,7 +14,7 @@ const AboutPage = () => {
                     </div>
                     <hr />
                     <div className="card-body">
-                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p className="card-text">Looking to enjoy a home cooked meal with new friends? Use our network of home cooks to find a dinner party near you. Tell us how many are in your group and what kinds of foods you like and we will pair you with your perfect host. Looking to find guests to try that new recipe you’ve been working on? As a host on Dinner Bell you can find diners in your town looking to eat a home cooked meal!</p>
                     </div>
                 </div>
                 <div className="card about-me-box col-lg-4 col-sm-12">
@@ -23,7 +23,7 @@ const AboutPage = () => {
                     </div>
                     <hr />
                     <div className="card-body">
-                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p className="card-text">Build your profile and explore other diners and hosts in your area. Once you find the perfect host send them a message to connect. Discuss what foods you like to eat and make food friends! Decide a date and time and enjoy your dinner party. Leave reviews on your new friends profiles letting everyone know what a good cook they are!</p>
                     </div>
                 </div>
                 <div className="card about-me-box col-lg-4 col-sm-12">
@@ -32,7 +32,7 @@ const AboutPage = () => {
                     </div>
                     <hr />
                     <div className="card-body">
-                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p className="card-text">When you use Dinner Bell you can meet new friends to share a meal with everyday. We believe sharing food is the best way to get know someone and want to help people make connections through food. So go ahead and explore diners and hosts in your area -- The perfect home cooked meal is waiting for you! </p>
                     </div>
                 </div>
             </div>
