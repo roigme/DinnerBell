@@ -20,7 +20,7 @@ const LPSearch = props => {
         />
         <button
           type="button" onClick={props.handleFormSubmit}
-          class="btn btn-primary btn-lg btn-block home-search-btn">
+          className="btn btn-primary btn-lg btn-block home-search-btn">
           Search
       </button>
       </div>

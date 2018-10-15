@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import { Security, SecureRoute, ImplicitCallback } from "@okta/okta-react";
+import { Security, ImplicitCallback } from "@okta/okta-react";
 import LandingPage from "./components/LandingPage/LandingPage.js";
 import Login from "./components/auth/Login.js";
-import Footer from "./components/Footer";
 import UserProfile from './components/UserProfile';
-import UserDashNav from "./components/UserDashNav/UserDashNav";
 
 function onAuthRequired({ history }) {
   history.push("/login");

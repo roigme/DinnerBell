@@ -1,16 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import SideNav, {
-  Toggle,
-  Nav,
   NavItem,
   NavIcon,
   NavText
 } from "@trendmicro/react-sidenav";
-
-// Be sure to include styles at some point, probably during your bootstraping
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import UserProfile from "../UserProfile";
 
 
 
@@ -69,9 +64,6 @@ const UserDashNav = () => {
                 </SideNav.Nav>
               </SideNav>
               <main>
-                
-                {/* <Route path="/profile" component={props => <UserProfile />} /> */}
-               
               </main>
             </React.Fragment>
           )}

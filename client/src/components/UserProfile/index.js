@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import "./UserProfile.css";
 import API from "../../utils/API";
-import UserProfileTabs from "./MainProfilePage/UserProfileTabs";
 import UserDashNav from "../UserDashNav/UserDashNav";
-import { Link } from 'react-router-dom';
 import MainProfilePage from './MainProfilePage';
 import EditProfilePage from './EditProfilePage';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class UserProfile extends Component {
   state = {

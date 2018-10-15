@@ -6,14 +6,24 @@ const EditProfilePage = props => {
     return (
         <div className="navbar-wrapper">
             <div>
-                <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">User Profile</a>
+                <ul className="nav justify-content-center">
+                    <li className="nav-item">
+                        <Link
+                            to="/profile"
+                            className="nav-link btn btn-primary text-white"
+                        >
+                            Return To Profile
+                        </Link>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Host Profile</a>
+                    <li className="nav-item">
+                        <Link
+                            to="/profile"
+                            className="nav-link btn btn-primary text-white"
+                        >
+                            Return To Profile
+                        </Link>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <Link
                             to="/profile"
                             className="nav-link btn btn-primary text-white"
