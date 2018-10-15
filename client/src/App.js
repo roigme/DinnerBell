@@ -24,7 +24,7 @@ class App extends Component {
           >
             <div>
               <Route exact path="/" component={LandingPage} />
-              <Route exact path="/profile" component={UserProfile} />
+              <Route path="/profile" component={UserProfile} />
               <Route
                 path="/login"
                 render={() => (
