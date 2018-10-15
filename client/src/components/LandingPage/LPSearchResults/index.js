@@ -16,7 +16,11 @@ const LPSearchResults = props => {
                         About this Host: {host.about}
                     </li>
                     <li key={Math.floor(Math.random() * 10000) + 1}>
-                        Serving in: {host.city}, {host.state}
+                        Serving in: <a 
+                        href={`https://www.google.com/maps/place/${host.city}+${host.state}`}
+                        target="_blank" rel="noopener noreferrer">
+                        {host.city}, {host.state}
+                        </a>
                     </li>
                     <hr />
                     </div>
