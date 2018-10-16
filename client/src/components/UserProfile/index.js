@@ -1,19 +1,24 @@
 import React, { Component } from "react";
 import "./UserProfile.css";
 import API from "../../utils/API";
-import UserProfileTabs from "./MainProfilePage/UserProfileTabs";
 import UserDashNav from "../UserDashNav/UserDashNav";
-import { Link } from 'react-router-dom';
 import MainProfilePage from './MainProfilePage';
 import EditProfilePage from './EditProfilePage';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class UserProfile extends Component {
   state = {
     // IMPORTANT: This userID property is what the app hinges on when showing the profile to the user based on who is logged in...
     userID: "5bc20b1d6df3e713e064c96c",
     displayName: "",
-    email: "",
+    firstName: "",
+    lastName: "",
+    city: "",
+    state: "",
+    groupSize: "",
+    about: "",
+    maxGroup: "",
+    foodType: "",
     profile: [],
     favoriteFood: [],
     dinerProfile: [],
@@ -37,6 +42,17 @@ class UserProfile extends Component {
       .catch(err => console.log(err));
   };
 
+  handleInputChange = event => {
+    const {name, value} = event.target;
+    this.setState({
+      [name]: value
+    })
+  }
+
+  handleUserChange = () => {
+    API
+  }
+
   render() {
     return (
       <div className="lp-search-bg">
@@ -52,8 +68,11 @@ class UserProfile extends Component {
                     dinerProfile={this.state.dinerProfile}
                     hostProfile={this.state.hostProfile} />}
                 />
-                <Route exact path="/profile/editprofile"
-                  render={EditProfilePage}
+                <Route path="/profile/editprofile"
+                  render={(props) => <EditProfilePage {...props}
+                  profile={this.state.profile}
+                  dinerProfile={this.state.dinerProfile}
+                  hostProfile={this.state.hostProfile} />}
                 />
               </div>
             </Router>

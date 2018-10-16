@@ -8,6 +8,7 @@ const Footer = () => {
         <div className="col-sm-12 col-lg-12">
           <img
             src={require("./images/iconfinder-256.png")}
+            alt="dinner_plate"
             width="50"
             height="50"
           />
@@ -15,7 +16,7 @@ const Footer = () => {
             Dinner Bell © 2018 Patrick Lehmann, Matt Roig &amp; Matthew Timko.
             </p>
           <p className="white-txt">
-            <a href="https://github.com/roigme/dinnerbell" target="_blank">
+            <a href="https://github.com/roigme/dinnerbell" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github" /> View Our Code On GitHub
               </a>
           </p>

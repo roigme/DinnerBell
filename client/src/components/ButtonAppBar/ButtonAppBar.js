@@ -83,6 +83,16 @@ export default withAuth(class ButtonAppBar extends Component {
           <li className="nav-item">
               {logger}
           </li>
+          <li className="nav-item">
+            <Link
+              to="/profile"
+              className={
+                window.location.pathname === "/" ? "nav-link active" : "nav-link"
+              }
+            >
+              Profile
+      </Link>
+          </li>
           <li className="nav-item dropdown">
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
               <a className="dropdown-item">About</a>

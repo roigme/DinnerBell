@@ -1,19 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import EditProfileTabs from './EditProfileTabs'
+import EditUserProfile from "./EditUserProfile.js";
+import EditHostProfile from "./EditHostProfile.js";
+
 
 const EditProfilePage = props => {
     return (
-        <div className="navbar-wrapper">
-            <div>
-                <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">User Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Host Profile</a>
-                    </li>
-                    <li class="nav-item">
+        <div className="navbar-wrapper row">
+            <div className="col-lg-12 col-sm-12">
+                <ul className="nav justify-content-center">
+                    <li className="nav-item">
                         <Link
                             to="/profile"
                             className="nav-link btn btn-primary text-white"
@@ -24,9 +20,14 @@ const EditProfilePage = props => {
                 </ul>
                 <hr />
             </div>
-            <EditProfileTabs />
+                <EditUserProfile
+                profile={props.profile}
+                dinerProfile={props.dinerProfile}
+                hostProfile={props.hostProfile} />
+                <EditHostProfile
+                hostProfile={props.hostProfile} />
         </div>
     )
-}
+};
 
 export default EditProfilePage;

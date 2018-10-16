@@ -3,19 +3,19 @@ import React from 'react';
 const LPSearchResults = props => {
     return (
         <ul>
-            {props.searchResults.map(host => {
+            {props.searchResults.map((host, index) => {
                 return (
-                    <div className="host-result">
-                    <li key={Math.floor(Math.random() * 10000) + 1}>
+                    <div key={index} className="host-result">
+                    <li>
                         Maximum # of Guests allowed: {host.maxGroup}
                     </li>
-                    <li key={Math.floor(Math.random() * 10000) + 1}>
+                    <li>
                         Food being served: {host.foodType}
                     </li>
-                    <li key={Math.floor(Math.random() * 10000) + 1}>
+                    <li>
                         About this Host: {host.about}
                     </li>
-                    <li key={Math.floor(Math.random() * 10000) + 1}>
+                    <li>
                         Serving in: <a 
                         href={`https://www.google.com/maps/place/${host.city}+${host.state}`}
                         target="_blank" rel="noopener noreferrer">
