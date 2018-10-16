@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import { Security, ImplicitCallback } from "@okta/okta-react";
+import { Security, ImplicitCallback, SecureRoute } from "@okta/okta-react";
 import LandingPage from "./components/LandingPage/LandingPage.js";
 import Login from "./components/auth/Login.js";
 import UserProfile from './components/UserProfile';
@@ -22,7 +22,7 @@ class App extends Component {
           >
             <div>
               <Route exact path="/" component={LandingPage} />
-              <Route path="/profile" component={UserProfile} />
+              <SecureRoute path="/profile" component={UserProfile} />
               <Route
                 path="/login"
                 render={() => (

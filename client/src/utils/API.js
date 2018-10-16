@@ -10,8 +10,8 @@ export default {
     return axios.get("/api/user/" + id);
   },
   // Saves a user to the database
-  saveUser: function(userData) {
-    return axios.post("/api/user", userData);
+  updateUser: function(id, formData) {
+    return axios.put("/api/user/" + id, formData);
   },
   //Gets all hosts
   getHosts: function() {
@@ -25,7 +25,7 @@ export default {
     return axios.get('/api/host/' + foodType + '/' + maxGroup);
   },
   // Saves a host to the database
-  saveHost: function(id) {
-    return axios.post("/api/host" + id);
+  updateHost: function(id, formData) {
+    return axios.put("/api/host" + id, formData);
   }
 };
