@@ -24,7 +24,7 @@ const LPSearch = props => {
           Search
       </button>
       </div>
-      <div className="col-lg-6 col-sm-12 bg-white search-results">
+      <div className="col-lg-6 col-sm-12 bg-white search-results text-center border border-primary rounded">
         <LPSearchResults
           searchResults={props.searchResults} />
           Please <a href="/login"> log in </a> to connect with these hosts

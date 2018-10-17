@@ -4,11 +4,11 @@ import React from 'react';
 const EditHostProfile = props => {
     return (
         <div className="col-sm-12 col-lg-12 mt-5">
-            <div className="col-lg-12 col-sm-12 text-center text-primary mt-3">
+            <div className="col-lg-12 col-sm-12 text-left text-primary mt-3">
                 <h4>Host Profile</h4>
             </div>
             <div className="col-lg-12 col-sm-12 lp-search text-primary mt-5">
-                <form class="text-center">
+                <form class="text-left">
                     City you are hosting in
             <input className="form-control mb-3"
                         placeholder={props.hostProfile.city} />
