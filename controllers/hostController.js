@@ -24,7 +24,7 @@ module.exports = {
     },
     findByFoodAndGroup: function(req, res) {
         db.Host
-          .find({ maxGroup:{ $lte: req.params.maxgroup }, foodType:{ $regex: new RegExp("^" + req.params.foodtype.toLowerCase(), "i" ) }} )
+          .find({ maxGroup:{ $gte: req.params.maxgroup }, foodType:{ $regex: new RegExp("^" + req.params.foodtype.toLowerCase(), "i" ) }} )
           .sort({ maxGroup: 1 })
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
