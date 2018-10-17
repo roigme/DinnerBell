@@ -4,11 +4,11 @@ import React from 'react';
 const EditUserProfile = props => {
     return (
         <div className="col-sm-12 col-lg-12">
-            <div className="col-lg-12 col-sm-12 text-center text-primary mt-3">
+            <div className="col-lg-12 col-sm-12 text-left text-primary mt-3">
                 <h4>User Profile</h4>
             </div>
             <div className="col-lg-12 col-sm-12 lp-search text-primary mt-5">
-                <form class="text-center">
+                <form class="text-left">
                     User Name
             <input name="displayName" className="form-control mb-3"
                         placeholder={props.profile.displayName} />

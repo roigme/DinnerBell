@@ -38,8 +38,7 @@ const AboutPage = () => {
             </div>
             <div className="row text-center about-me-summary">
                 <div className="about-me-summary-text col-sm-12 col-lg-12">
-                    Some text that ties it all together and talks about how awesome we are.
-                </div>
+                <i className="fas fa-search-location"></i><i className="far fa-comments"></i><i className="fas fa-utensils"></i>                </div>
             </div>
         </div>
     );

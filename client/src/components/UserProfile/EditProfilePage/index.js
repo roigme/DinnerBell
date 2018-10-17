@@ -8,7 +8,7 @@ const EditProfilePage = props => {
     return (
         <div className="navbar-wrapper row">
             <div className="col-lg-12 col-sm-12">
-                <ul className="nav justify-content-center">
+                <ul className="nav justify-content-left">
                     <li className="nav-item">
                         <Link
                             to="/profile"

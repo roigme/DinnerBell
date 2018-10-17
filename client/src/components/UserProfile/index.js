@@ -47,7 +47,7 @@ class UserProfile extends Component {
     return (
       <div className="lp-search-bg">
         <div className="overlay">
-          <div className="container emp-profile">
+          <div className="container emp-profile border border-dark rounded">
             <UserDashNav />
             <Router>
               <div>
