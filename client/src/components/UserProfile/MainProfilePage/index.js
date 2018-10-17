@@ -7,16 +7,17 @@ const MainProfilePage = props => {
         <div className="row">
             <div className="col-md-4">
                 <div className="profile-img">
-                    <img src="https://via.placeholder.com/350x250" alt="" />
-                    <div className="file text-white m-auto">
-                        Click here to change photo
-              <input type="file" name="file" />
-                    </div>
-                    <button className="btn btn-primary">Upload</button>
+                    <img className="border border-dark" src="https://avatars0.githubusercontent.com/u/35785843?s=400&v=4" alt="" />
+                    <br />
+                    <br />
+                    
+                    <button className="btn btn-outline-primary btn-sm">Upload Photo</button>
+                    <br />
                 </div>
+                <br />
                 <div className="profile-work">
                     <ul>
-                        <h3>Favorite Foods</h3>
+                        <h4>Favorite Foods</h4>
                         {props.favoriteFood.map(food => {
                             return (
                                 <li key={Math.floor(Math.random() * 10000) + 1}>
