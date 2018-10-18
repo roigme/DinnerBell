@@ -22,7 +22,10 @@ class App extends Component {
           >
             <div>
               <Route exact path="/" component={LandingPage} />
-              <SecureRoute path="/profile" component={UserProfile} />
+              
+              {/* taking out the the secure Route for /profile for demo purposes */}
+              
+              <Route path="/profile" component={UserProfile} />
               <Route
                 path="/login"
                 render={() => (
