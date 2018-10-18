@@ -7,8 +7,10 @@ import '@okta/okta-signin-widget/dist/css/okta-theme.css';
  class SignInWidget extends Component {
   componentDidMount() {
     const el = ReactDOM.findDOMNode(this);
+    console.log(this.props.baseUrl),
     this.widget = new OktaSignIn({
       baseUrl: this.props.baseUrl,
+
       logo: 'logo.png',
       features: {
         registration: true,                 // Enable self-service registration flow
