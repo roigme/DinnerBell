@@ -43,7 +43,7 @@ const MainProfilePage = props => {
                                 aria-controls="home"
                                 aria-selected="true"
                             >
-                                Diner Profile
+                                Diner Profile and shit
                 </a>
                         </li>
                         <li className="nav-item">
